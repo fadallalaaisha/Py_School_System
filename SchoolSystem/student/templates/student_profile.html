@@ -1,0 +1,113 @@
+
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        body{
+background-color: cadetblue;
+        }
+      
+        img{
+        width: 50%;
+        height: 50%;
+        border-radius: 50px;
+        margin-left: 25%;
+    }
+    
+        table {
+        margin-left: 25%;
+          font-family: arial, sans-serif;
+          border-collapse: collapse;
+          width: 50%;
+        }
+        
+        td,th {           
+          border: 1px solid #dddddd;
+          text-align: left;
+          padding: 6px;
+        }       
+        tr:nth-child(even) {       
+          background-color: rgb(213, 201, 224);
+        }
+       .logo{
+          margin-left: 25%;
+           
+       }
+    </style>
+</head>
+<body>
+    <div class="logo">
+    <!-- <img src="https://akirachix.com/img/code-hive.png?_cchid=138194327577c036438d36774d26b056" style="height: 20%;width: 10%;margin-top: 1%;"> -->
+    </div>
+   <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card card-body h-100 border-info">
+                    {% if student.passport_photo %}                    
+                    <td ><img  class="img" src="{{student.passport_photo.url}}"></td> 
+                    {%endif%}
+                </div>
+            </div>
+            <br>
+            <!-- <div class="row"> -->
+                <div class="col-md-6">
+                    <div class="card card-body h-100">                      
+                     <table>
+                         <tr>
+                        <tr>
+                        <th>First Name:</th>
+                       <th>Last Name:</th>
+                       <th> Age:</th>
+                       <th> Gender:</th>
+                    </tr>
+                        <td>{{student.last_name}}</td>
+                        <td>{{student.first_name}}</td>
+                        <td>{{student.age}}</td>
+                        <td>{{student.gender}}</td>
+                    </table>
+                    <table>
+                        <tr>
+                       <tr>
+                       <th> Mentor Name:</th>
+                       <th> Language:</th>
+                       <th> Big Sister:</th>
+                       <th> Parent Contact:</th>
+                      </tr>
+                    <td>{{student.mentor_name}} </td>
+                    <td>{{student.language}} </td>
+                    <td>{{student.big_sister}} </td>
+                    <td>{{student.parent_contact}} </td>                 
+                    </table>
+                    <table>
+                    <tr>
+                        <tr>
+                            <th>Laptop Number:</th>
+                            <th> Room Number:</th>
+                            <th> Class Name:</th>
+                        </tr>
+                        <td>{{student.laptop_number}} </td>
+                        <td>{{student.room_number}} </td>
+                        <td>{{student.class_name}} </td>
+                    
+                    </table>
+                    <table>
+                        <tr>
+                       <tr>
+                    <th> Email:</th>
+                    <th> Medical Report:</th>
+                </tr>
+                    <td>{{student.email}}</td>
+                    <td>{{student.medical_report}}  </td>             
+                </table>
+                    </div>             
+                </div>
+                </div>
+</body>
+</html>

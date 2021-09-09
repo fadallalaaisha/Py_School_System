@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CalendarList</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    
+</head>
+<body> 
+
+ {% block content%}
+
+{%endblock%} 
+    <style>
+        body{background-color: rgb(235, 175, 65)}
+
+        .data{
+            text-align: center;
+            margin-left: 8%;
+            margin-right: 8%;
+            padding-top: 4%;  
+        }
+        #h{
+            text-align: center;
+            margin-top: 2%;
+        }
+    </style>
+     <div class="data">
+        <img src="https://akirachix.com/img/code-hive.png?_cchid=138194327577c036438d36774d26b056" style="height: 20%;width: 10%;margin-top: 1%;">
+        <div class="table-responsive">
+            <h1 id="h">Calendar Information</h1>
+            <table class="table">
+            <tr>
+                <th>Event Name</th>
+                <th>Event Month</th>
+                <th>Event Date</th>
+                <th>Event Organizer</th>
+                <th>Event Duration</th>
+                <th>Event Goals</th>
+                <th>Event Appoved</th>
+                <th>Event Event Attented By</th>
+            </tr>
+        </div>
+            {% for calendar in calendars%}
+            <tr>
+                <td>{{calendar.event_name}}</td>
+                <td>{{calendar.event_month}}</td>
+                <td>{{calendar.event_date}}</td>
+                <td>{{calendar.event_organizer}}</td>
+                <td>{{calendar.event_duration}}</td>
+                <td>{{calendar.event_goals}}</td>
+                <td>{{calendar.event_appoved}}</td>
+                <td>{{calendar.event_attented_by}}</td>
+            </tr>
+            {% endfor%}
+        </table>
+    </div>    
+</body>
+</html>
+
+ <!-- <h1>Hello{{name}}!Events for {{Month}}{{your}}</h1> -->

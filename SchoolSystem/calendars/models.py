@@ -1,17 +1,32 @@
-from django.db import models
+# from django.db import models
+# # Create your models here.
 
-# Create your models here.
+# class Event(models.Model):
+#      title = models.CharField(max_length=200)
+#      description = models.TextField()
+#      start_time = models.DateTimeField()
+#      end_time = models.DateTimeField()
 
-from django.http import response
-from django.forms.fields import CharField
-from django.forms.widgets import NumberInput
 
-class Calendar(models.Model):
-    event_name=models.CharField(max_length=10)
-    event_month=models.CharField(max_length=10)
-    event_date=models.DateTimeField()
-    event_organizer=models.CharField(max_length=10)
-    event_duration=models.TimeField()
-    event_golds=models.CharField(max_length=14)
-    event_appoved=models.CharField(max_length=12)
-    event_attented_by=models.CharField(max_length=3)
+
+
+
+
+
+
+
+
+
+# #     event_name=models.CharField(max_length=10,null=True)
+# #     event_month=models.CharField(max_length=10,null=True)
+# #     event_date=models.DateTimeField(blank=2,null=True)
+# #     event_organizer=models.CharField(max_length=10,null=True)
+# #     event_duration=models.TimeField(null=True)
+# #     event_goals=models.CharField(max_length=14, null=True)
+# #     event_appoved=models.CharField(max_length=12,null=True)
+# #     event_attented_by=models.CharField(max_length=3,null=True)
+    
+# # def __str__(self):
+# #     return self.event_name
+    
+# from django.http import response

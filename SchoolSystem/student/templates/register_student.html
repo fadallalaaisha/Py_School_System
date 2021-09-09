@@ -9,8 +9,6 @@
     <title>StudentForm</title>
 </head>
 <body>
-
-
     <style>
         h1{
           text-align: center;
@@ -21,7 +19,6 @@
             justify-content: center;
             font-size: 20px;
             color:purple;
-         
         }
         input{
            width: 100%;
@@ -29,8 +26,7 @@
            border: 1px solid ;
            font-size: 15px;
            padding: 8px 8px;
-           border-radius: 5px;
-           
+           border-radius: 5px;    
        }
        select{
            width: 100%;
@@ -57,35 +53,31 @@
            margin-right: 10px;
            font-size: 14px;
        }
-
-      button{
-         
-          background-color: blue;
+      button{      
+          background-color: blueviolet;
           align-items: 50%;
-          margin-left: 45%;
+          margin-left: 25%;
           top: 30px;
           border-color:black;
           height: 50px;
+          width:260px;
+          border-radius: 6%;
       }
       .pic{
           background-size: contain;
           width: 80%;
           text-align: center;
-          height: 150px;
-      }
-        
-      
+          height: 150px;}
     </style>
-
-   <div class="wrapper">
+       <div class="wrapper">
        <div class="form">
     <form method="POST">
 
         <img class="pic" src="data:image/jpeg;base64,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">
+        <!-- here -->
+        {%csrf_token%}                  
         <h1>Student Registration Form </h1>
-        
         {{form.as_p}}
-        {%csrf_token%}
         <button>Submit</button>
     </form>
     </div>

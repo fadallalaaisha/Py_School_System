@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CourseList</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+</head>
+<body> 
+    <style>
+        body{background-color: rgb(222, 169, 233);}
+
+        .data{
+            text-align: center;
+            margin-left: 8%;
+            margin-right: 8%;
+            padding-top: 4%;    
+        }
+        #h{
+            text-align: center;
+            margin-top: 2%;
+        }
+    </style>
+     <div class="data">
+        <img src="https://akirachix.com/img/code-hive.png?_cchid=138194327577c036438d36774d26b056" style="height: 20%;width: 10%;margin-top: 1%;">
+
+        <div class="table-responsive">
+            <h1 id="h">Course Information</h1>
+            <table class="table">
+            <tr>
+                <th>Course</th>
+                <th>Course Code</th>
+                <th>Course Duration</th>
+                <th>Trainer Course</th>
+                <th>Project</th>
+                <th>Syllabus</th>
+                <th>Edit</th>
+                <th>Delete</th>
+
+            </tr>
+        </div>
+            {% for course in courses%}
+            <tr>
+                <td>{{course.course}}</td>
+                <td>{{course.course_code}}</td>
+                <td>{{course.course_duration}}</td>
+                <td>{{course.trainer_course}}</td>
+                <td>{{course.project}}</td>
+                <td>{{course.syllabus}}</td>
+                <td><a href="{%url 'edit_course' id=course.id %}">Edit</a></td>
+                <td><a href="{%url 'delete_course' id=course.id %}">Delete</a></td>
+
+            </tr>
+            {% endfor%}
+        </table>
+    </div>    
+</body>
+</html>
