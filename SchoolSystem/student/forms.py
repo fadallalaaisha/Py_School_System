@@ -1,7 +1,6 @@
 from django import forms
 from django.db.models.base import Model
 #handles data
-# from django.forms import fields
 from .models import Student
 
 class StudentRegistrationForm(forms.ModelForm):
@@ -9,5 +8,5 @@ class StudentRegistrationForm(forms.ModelForm):
         model=Student
         fields="__all__"
 
-
+# Meta tell the system how to work
         

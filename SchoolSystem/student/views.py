@@ -6,9 +6,7 @@ from .forms import StudentRegistrationForm
 from django.shortcuts import render,redirect
 from django.http.response import HttpResponse
 
-# from django.db.models.aggregates import StdDev
-# from django import forms
-# from django.forms.forms import Form
+
 # that's where all the logics is 
 def register_student(request):
     if request.method == 'POST':

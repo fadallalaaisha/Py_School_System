@@ -30,6 +30,7 @@ urlpatterns = [
     path("trainer/",include("trainer.urls")), 
     path("course/",include("course.urls")),
     path("calendars/",include("calendars.urls")),
+    path('Api/',include("Api.urls")),
 
 ]
 if settings.DEBUG:

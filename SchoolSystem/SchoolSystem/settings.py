@@ -45,6 +45,8 @@ INSTALLED_APPS = [
     'course',
     'calendars',
     'core',
+    'Api',
+    'rest_framework',
     
 ]
 
