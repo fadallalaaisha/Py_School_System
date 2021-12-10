@@ -29,8 +29,10 @@ urlpatterns = [
     path('student/',include("student.urls")),
     path("trainer/",include("trainer.urls")), 
     path("course/",include("course.urls")),
-    path("calendars/",include("calendars.urls")),
+    path("cal/",include("cal.urls")),
     path('Api/',include("Api.urls")),
+    path('accounts/', include('django.contrib.auth.urls')),
+    # path('account/', include("registration.backage.default.urls")),
 
 ]
 if settings.DEBUG:

@@ -1,6 +1,5 @@
 from django import forms
 from django.db.models.base import Model
-#handles data
 from .models import Student
 
 class StudentRegistrationForm(forms.ModelForm):

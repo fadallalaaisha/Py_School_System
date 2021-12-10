@@ -1,11 +1,9 @@
-import django
 from student .models import Student
 from django.shortcuts import render
 from .models import Student
 from .forms import StudentRegistrationForm
 from django.shortcuts import render,redirect
 from django.http.response import HttpResponse
-
 
 # that's where all the logics is 
 def register_student(request):
@@ -45,39 +43,9 @@ def delete_student(request,id):
     student.delete()
     return redirect("student_list")
 
+# test_student list 
+# test student profile
+# test edit student
+# test for the course    
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# def student_profile(request, id):
-#     student = Student.objects.get(id==id)
-#     return render(request,"student_profile.html",{"student":student})
-
-# def edit_student(request,id):
-#     student=Student.objects.get(id=id)
-#     if request.method== "POST":
-#         form=StudentRegistrationForm(request.Post,instance=student)
-#         if form.is_valid():
-#             form.save()
-#             return redirect("student_profile", id=student.id)
-
-#         else:
-#             form=StudentRegistrationForm(instance=student)
-#             return render(request,"edit_student",{"form":form})
-
-
+# CI/CD helps one to colabrite eg a grope of team working togather in one django project.

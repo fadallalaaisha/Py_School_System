@@ -1,9 +1,13 @@
+# from _typeshed import self
 from django.db import models
 from django.forms.fields import CharField
 from django.forms.widgets import NumberInput
 from django.http import response
+import datetime
 
-# Create your models here.
+# add this to the trainer as well
+# from django.contrib.auth.models import User 
+
 class Student(models.Model):
     first_name=models.CharField(max_length=10,help_text="e.g Aisha")
     last_name=models.CharField(max_length=10)
@@ -46,5 +50,26 @@ class Student(models.Model):
 
     def full_name(self):
         return f"{self.first_name} {self.last_name}"
+
+def test_full_name_contains_first_name(self):
+    self.assertin(self.student.first_name,self.student.full_name())
+
+def test_full_name_contain_last_name(self):
+    self.assertin(self.student.last_name,self.student.full_name()) 
+
+
+    def test_year_of_birth(self):
+        year=datetime.dateTime.now(). year - Student.age
+        self.assertEqual(year, self.student.year_of_birth()) 
+
+    def test_student_regristrarrion_view(student):
+        self.data= {"first_name": self.Student.first_name, "last_name":self.Student.last_name,
+        "age":self.Student.age}
+
+        url=reversed("register_student")
+        response= self.Client.post(url, self.data)
+        self.assertEqual(response.startus_code, 200)    
+
+
 
         

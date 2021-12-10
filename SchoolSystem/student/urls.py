@@ -1,5 +1,3 @@
-# from django import urls
-# from django.urls.resolvers import URLPattern
 from django.urls import path
 from .views import delete_student, edit_student, register_student,student_list, student_profile
 

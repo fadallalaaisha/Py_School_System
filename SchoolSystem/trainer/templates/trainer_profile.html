@@ -1,17 +1,46 @@
-
-</html><!DOCTYPE html>
+{% load static %}
+<!DOCTYPE html>
 <html lang="en">
+ 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trainer Profile</title>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Trainer Profile</title>
 </head>
+ 
 <body>
-<img src="{{trainer.image.url}}"/>
-
-    <h2>{{trainer.first_name}}</h2>
-    <h5>{{trainer.last_name}}</h5>
-    <h5>{{trainer.age}}</h5>
+   <div class="profile">
+       <img src="{{ trainer.profile_picture.url}}">
+       <h2>{{ trainer.first_name }}</h2>
+       <h2>{{ trainer.age }}</h2>
+       <h2>{{ trainer.gender}}</h2>
+       <h2>{{ trainer.nationality }}</h2>
+       <h2>{{ trainer.profession}}</h2>
+   </div>
+   <style>
+       .profile {
+           border: 1px;
+           border-radius: 10px;
+           box-shadow: blueviolet;
+           height: 530px;
+           width: 400px;
+           margin-left: 500px;
+           text-align: center;
+           background-color: rgb(243, 212, 243);
+       }
+      
+       img {
+           padding-top: 10px;
+           width: 200px;
+           height: 250px;
+           border-radius: 50%;
+       }
+      
+       h2 {
+           font-size: 20px;
+       }
+   </style>
 </body>
+ 
 </html>

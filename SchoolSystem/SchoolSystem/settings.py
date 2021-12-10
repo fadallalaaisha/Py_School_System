@@ -28,6 +28,7 @@ SECRET_KEY = 'django-insecure-c@ju^til#9y!=vb%i5p&%^ev*&grv&6_gg%bsy_nd2^wsorb4j
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+# ALLOWED_HOSTS = ["localhost","0.0.0.0","immense-brushlands-50779.herokuapp.com"]
 ALLOWED_HOSTS = []
 
 
@@ -43,10 +44,12 @@ INSTALLED_APPS = [
     'student',
     'trainer',
     'course',
-    'calendars',
+    'cal',
     'core',
     'Api',
     'rest_framework',
+    # today
+    'registration',
     
 ]
 
@@ -136,9 +139,7 @@ MEDIA_URL = 'media/'
 MEDIA_ROOT=BASE_DIR/'media/'
 MEDIA_ROOT = os.path.join(BASE_DIR,'media/')
 
-# STATIC_ROOT = "/var/www/example.com/static/"
-
-
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
